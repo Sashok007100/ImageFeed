@@ -7,19 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		891F1C542B0119DD0031082C /* ImagesListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891F1C532B0119DD0031082C /* ImagesListCell.swift */; };
 		89352BD02B01129900D3DC31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89352BCF2B01129900D3DC31 /* AppDelegate.swift */; };
 		89352BD22B01129900D3DC31 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89352BD12B01129900D3DC31 /* SceneDelegate.swift */; };
-		89352BD42B01129900D3DC31 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89352BD32B01129900D3DC31 /* ViewController.swift */; };
+		89352BD42B01129900D3DC31 /* ImagesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89352BD32B01129900D3DC31 /* ImagesListViewController.swift */; };
 		89352BD72B01129A00D3DC31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89352BD52B01129A00D3DC31 /* Main.storyboard */; };
 		89352BD92B01129A00D3DC31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89352BD82B01129A00D3DC31 /* Assets.xcassets */; };
 		89352BDC2B01129A00D3DC31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89352BDA2B01129A00D3DC31 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		891F1C532B0119DD0031082C /* ImagesListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesListCell.swift; sourceTree = "<group>"; };
 		89352BCC2B01129900D3DC31 /* ImageFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89352BCF2B01129900D3DC31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89352BD12B01129900D3DC31 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		89352BD32B01129900D3DC31 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		89352BD32B01129900D3DC31 /* ImagesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesListViewController.swift; sourceTree = "<group>"; };
 		89352BD62B01129A00D3DC31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		89352BD82B01129A00D3DC31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		89352BDB2B01129A00D3DC31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,6 +39,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		891F1C522B0119CD0031082C /* ImagesList */ = {
+			isa = PBXGroup;
+			children = (
+				89352BD32B01129900D3DC31 /* ImagesListViewController.swift */,
+				891F1C532B0119DD0031082C /* ImagesListCell.swift */,
+			);
+			path = ImagesList;
+			sourceTree = "<group>";
+		};
 		89352BC32B01129900D3DC31 = {
 			isa = PBXGroup;
 			children = (
@@ -58,7 +69,7 @@
 			children = (
 				89352BCF2B01129900D3DC31 /* AppDelegate.swift */,
 				89352BD12B01129900D3DC31 /* SceneDelegate.swift */,
-				89352BD32B01129900D3DC31 /* ViewController.swift */,
+				891F1C522B0119CD0031082C /* ImagesList */,
 				89352BD52B01129A00D3DC31 /* Main.storyboard */,
 				89352BD82B01129A00D3DC31 /* Assets.xcassets */,
 				89352BDA2B01129A00D3DC31 /* LaunchScreen.storyboard */,
@@ -138,7 +149,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				89352BD42B01129900D3DC31 /* ViewController.swift in Sources */,
+				89352BD42B01129900D3DC31 /* ImagesListViewController.swift in Sources */,
+				891F1C542B0119DD0031082C /* ImagesListCell.swift in Sources */,
 				89352BD02B01129900D3DC31 /* AppDelegate.swift in Sources */,
 				89352BD22B01129900D3DC31 /* SceneDelegate.swift in Sources */,
 			);
