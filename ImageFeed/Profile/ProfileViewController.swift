@@ -13,7 +13,6 @@ final class ProfileViewController: UIViewController {
         let avatarImageView = UIImageView()
         view.addSubview(avatarImageView)
         avatarImageView.image = UIImage(named: "Photo")
-        avatarImageView.translatesAutoresizingMaskIntoConstraints = false
         
         //MARK: - UIBUtton()
         let logoutButton = UIButton.systemButton(
@@ -22,13 +21,11 @@ final class ProfileViewController: UIViewController {
             action: #selector(self.didTapLogoutButton)
         )
         view.addSubview(logoutButton)
-        logoutButton.translatesAutoresizingMaskIntoConstraints = false
         logoutButton.tintColor = .ypRed
         
         //MARK: - nameLabel
         let nameLabel = UILabel()
         view.addSubview(nameLabel)
-        nameLabel.translatesAutoresizingMaskIntoConstraints = false
         nameLabel.text = "Екатерина Новикова"
         nameLabel.textColor = .ypWhite
         nameLabel.font = UIFont.boldSystemFont(ofSize: 23)
@@ -36,7 +33,6 @@ final class ProfileViewController: UIViewController {
         //MARK: - loginNameLabel
         let loginNameLabel = UILabel()
         view.addSubview(loginNameLabel)
-        loginNameLabel.translatesAutoresizingMaskIntoConstraints = false
         loginNameLabel.text = "@ekaterina_nov"
         loginNameLabel.textColor = .ypGray
         loginNameLabel.font = UIFont.systemFont(ofSize: 13)
@@ -44,10 +40,13 @@ final class ProfileViewController: UIViewController {
         //MARK: - descriptionLabel
         let descriptionLabel = UILabel()
         view.addSubview(descriptionLabel)
-        descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
         descriptionLabel.text = "Hello, world!"
         descriptionLabel.textColor = .ypWhite
         descriptionLabel.font = UIFont.systemFont(ofSize: 13)
+        
+        [avatarImageView, logoutButton, nameLabel, loginNameLabel, descriptionLabel].forEach {
+            $0.translatesAutoresizingMaskIntoConstraints = false
+        }
         
         //MARK: - Constraints
         NSLayoutConstraint.activate([
