@@ -16,6 +16,7 @@
 		89352BD92B01129A00D3DC31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89352BD82B01129A00D3DC31 /* Assets.xcassets */; };
 		89352BDC2B01129A00D3DC31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89352BDA2B01129A00D3DC31 /* LaunchScreen.storyboard */; };
 		895A16F22B069F6B004DA6B5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895A16F12B069F6B004DA6B5 /* ProfileViewController.swift */; };
+		89E9434E2B1B9BB80052D378 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E9434D2B1B9BB80052D378 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		89352BDB2B01129A00D3DC31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89352BDD2B01129A00D3DC31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		895A16F12B069F6B004DA6B5 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		89E9434D2B1B9BB80052D378 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			children = (
 				89352BCF2B01129900D3DC31 /* AppDelegate.swift */,
 				89352BD12B01129900D3DC31 /* SceneDelegate.swift */,
+				89E9434D2B1B9BB80052D378 /* Constants.swift */,
 				890386782B0911FB0061F187 /* SingleImageView */,
 				895A16F32B06AABF004DA6B5 /* Profile */,
 				891F1C522B0119CD0031082C /* ImagesList */,
@@ -175,6 +178,7 @@
 				891F1C542B0119DD0031082C /* ImagesListCell.swift in Sources */,
 				895A16F22B069F6B004DA6B5 /* ProfileViewController.swift in Sources */,
 				89352BD02B01129900D3DC31 /* AppDelegate.swift in Sources */,
+				89E9434E2B1B9BB80052D378 /* Constants.swift in Sources */,
 				890386772B090F0B0061F187 /* SingleImageViewController.swift in Sources */,
 				89352BD22B01129900D3DC31 /* SceneDelegate.swift in Sources */,
 			);
