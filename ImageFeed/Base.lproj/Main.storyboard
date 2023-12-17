@@ -178,6 +178,10 @@
                                     <action selector="didTapBackButton:" destination="dUZ-Xd-cJH" eventType="touchUpInside" id="Syd-za-YK9"/>
                                 </connections>
                             </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="0ZY-vn-xVF">
+                                <rect key="frame" x="0.0" y="44" width="414" height="4"/>
+                                <color key="tintColor" name="YP Black"/>
+                            </progressView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qvQ-zw-6MQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -186,11 +190,15 @@
                             <constraint firstItem="Glp-ag-k41" firstAttribute="top" secondItem="qvQ-zw-6MQ" secondAttribute="top" id="RbF-eg-AHB"/>
                             <constraint firstAttribute="trailing" secondItem="Kcm-x7-aHW" secondAttribute="trailing" id="T5q-nE-Uiq"/>
                             <constraint firstAttribute="bottom" secondItem="Kcm-x7-aHW" secondAttribute="bottom" id="UPO-Re-O6E"/>
+                            <constraint firstItem="0ZY-vn-xVF" firstAttribute="leading" secondItem="7wV-Hl-ptW" secondAttribute="leading" id="YNv-Al-RC8"/>
                             <constraint firstAttribute="top" secondItem="Kcm-x7-aHW" secondAttribute="top" id="aUG-iY-v8D"/>
+                            <constraint firstItem="0ZY-vn-xVF" firstAttribute="top" secondItem="Glp-ag-k41" secondAttribute="bottom" id="aoT-sS-XMa"/>
                             <constraint firstItem="Glp-ag-k41" firstAttribute="leading" secondItem="qvQ-zw-6MQ" secondAttribute="leading" id="ejo-yi-JKx"/>
+                            <constraint firstAttribute="trailing" secondItem="0ZY-vn-xVF" secondAttribute="trailing" id="o1U-38-SXd"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="progressView" destination="0ZY-vn-xVF" id="4UO-7s-4CS"/>
                         <outlet property="webView" destination="Kcm-x7-aHW" id="lqb-aT-0b0"/>
                     </connections>
                 </viewController>
