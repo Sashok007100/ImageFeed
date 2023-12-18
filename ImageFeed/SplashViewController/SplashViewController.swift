@@ -2,15 +2,17 @@ import UIKit
 
 final class SplashViewController: UIViewController {
     
+    // MARK: - Private Properties
     private let showAuthenticationScreenSegueIdentifier = "ShowAuthenticationScreen"
     
     private let oauth2Service = OAuth2Service()
     private let oauth2TokenStorage = OAuth2TokenStorage()
     
+    // MARK: - Lifecycle
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        if let token = OAuth2TokenStorage().token {
+        if let _ = OAuth2TokenStorage().token {
             switchToTabBarContoller()
         } else {
             performSegue(withIdentifier: showAuthenticationScreenSegueIdentifier, sender: nil)
@@ -26,10 +28,11 @@ final class SplashViewController: UIViewController {
         .lightContent
     }
     
+    // MARK: - Private Methods
     private func switchToTabBarContoller() {
         guard let window = UIApplication.shared.windows.first else { fatalError("Invalid Configuration") }
         
-        let tabBarContoller = UIStoryboard(name: "Main", bundle: .main)
+        let tabBarController = UIStoryboard(name: "Main", bundle: .main)
             .instantiateViewController(withIdentifier: "TabBarViewContoller")
         
         window.rootViewController = tabBarController
