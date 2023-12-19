@@ -1,7 +1,6 @@
 import UIKit
 
 final class SplashViewController: UIViewController {
-    
     // MARK: - Private Properties
     private let showAuthenticationScreenSegueIdentifier = "ShowAuthenticationScreen"
     
@@ -12,8 +11,8 @@ final class SplashViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        if let _ = OAuth2TokenStorage().token {
-            switchToTabBarContoller()
+        if let _ = oauth2TokenStorage.token {
+            switchToTabBarController()
         } else {
             performSegue(withIdentifier: showAuthenticationScreenSegueIdentifier, sender: nil)
         }
@@ -29,11 +28,11 @@ final class SplashViewController: UIViewController {
     }
     
     // MARK: - Private Methods
-    private func switchToTabBarContoller() {
+    private func switchToTabBarController() {
         guard let window = UIApplication.shared.windows.first else { fatalError("Invalid Configuration") }
         
         let tabBarController = UIStoryboard(name: "Main", bundle: .main)
-            .instantiateViewController(withIdentifier: "TabBarViewContoller")
+            .instantiateViewController(withIdentifier: "TabBarViewController")
         
         window.rootViewController = tabBarController
     }
@@ -55,7 +54,7 @@ extension SplashViewController {
 }
 
 extension SplashViewController: AuthViewControllerDelegate {
-    func authViewController(_vc: AuthViewController, didAuthenticateWithCode code: String) {
+    func authViewController(_ vc: AuthViewController, didAuthenticateWithCode code: String) {
         dismiss(animated: true) { [weak self] in
             guard let self = self else { return }
             self.fetchOAuthToken(code)
@@ -67,7 +66,7 @@ extension SplashViewController: AuthViewControllerDelegate {
             guard let self = self else { return }
             switch result {
             case .success:
-                self.switchToTabBarContoller()
+                self.switchToTabBarController()
             case .failure:
                 // TODO [Sprint 11]
                 break

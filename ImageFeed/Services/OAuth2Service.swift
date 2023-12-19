@@ -54,7 +54,7 @@ extension OAuth2Service {
             + "&&code=\(code)"
             + "&&grant_type=authorization_code",
             httpMethod: "POST",
-            baseURL: URL(string: "http://unsplash.com")!
+            baseURL: URL(string: "https://unsplash.com")!
         )
     }
 }
@@ -88,7 +88,7 @@ extension URLSession {
                let response = response,
                let statusCode = (response as? HTTPURLResponse)?.statusCode
             {
-                if (200..<300).contains(statusCode) {
+                if 200 ..< 300 ~= statusCode {
                     fulfillCompletion(.success(data))
                 } else {
                     fulfillCompletion(.failure(NetworkError.httpStatusCode(statusCode)))
