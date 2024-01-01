@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/relatedcode/ProgressHUD",
       "state" : {
-        "revision" : "5a7e1ba99652f429eb3bf60de0558cacc5c384be",
-        "version" : "14.1.0"
+        "revision" : "22c3f83268b4c47b4623fe3a9701af7310fa8d8a",
+        "version" : "13.6.1"
       }
     }
   ],
