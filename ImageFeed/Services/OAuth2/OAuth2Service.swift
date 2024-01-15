@@ -40,7 +40,6 @@ final class OAuth2Service {
                     completion(.failure(error))
                 }
             }
-            
         }
         
         self.task = task
@@ -89,6 +88,8 @@ enum NetworkError: Error {
     case httpStatusCode(Int)
     case urlRequestError(Error)
     case urlSessionError
+    case invalidRequest
+    case codeError
 }
 
 extension URLSession {

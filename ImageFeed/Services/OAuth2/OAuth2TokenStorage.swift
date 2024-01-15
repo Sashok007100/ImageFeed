@@ -1,18 +1,22 @@
 import Foundation
 
 final class OAuth2TokenStorage {
+    static let shared = OAuth2TokenStorage()
+    
     private let userDefaults = UserDefaults.standard
     
     private enum Keys: String {
-        case accessToken
+        case token
     }
+    
+    private let tokenKey = "BearerToken"
     
     var token: String? {
         get {
-            userDefaults.string(forKey: Keys.accessToken.rawValue)
+            userDefaults.string(forKey: tokenKey)
         }
         set {
-            userDefaults.set(newValue, forKey: Keys.accessToken.rawValue)
+            userDefaults.set(newValue, forKey: tokenKey)
         }
     }
 }
